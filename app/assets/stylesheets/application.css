@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* imports */
+@import "collections.scss";
+
+body, html{
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 38px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+}
+button:focus {
+  outline: none;
+}
+
+.app{
+
+}
+
+  .app .wrapper{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    min-height: 200px;
+    border-radius: 50px;
+    border-bottom: 5px solid purple;
+    box-shadow:  5px 10px 8px rgba(0,0,0,0.5), 5px 10px 18px rgba(0,0,0,0.5);
+  }
+    .app .wrapper .content{
+      padding: 25px;
+      margin: 20px;
+      min-height: 200px;
+    }
+  .app .wrapper .base{
+    border-radius: 0px 0px 50px 50px;
+    background-color: purple;
+    height: 0px;
+    margin-bottom: -10px;
+    padding-bottom: 65px;
+    width: 100%;
+  }
+
+.notice{
+  text-align: center;
+  position: absolute;
+  background-color: green;
+}
+.alert{
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  /* position: absolute; */
+  background-color: red;
+}

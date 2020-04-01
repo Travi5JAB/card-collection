@@ -1,0 +1,24 @@
+.collections{
+
+}
+  .collections .content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .collections .content .section{
+      text-align: center;
+      width: 140px;
+      margin: 20px;
+    }
+      .collections .content .section .image{
+        height: 190px;
+        width: 140px;
+        background-color: red;
+        color: white;
+      }
+      .collections .content #yugiohSection .image{
+        background-image: url(yugioh_back.jpg);
+      }
+      .collections .content #yugiohSection a:hover .image{
+        background-image: url(yugioh_card_front_small.jpg);
+      }
