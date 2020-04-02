@@ -63,8 +63,3 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # devise
 gem 'devise'
-
-# heroku db info
-group :production do
-  gem 'pg'
-end
