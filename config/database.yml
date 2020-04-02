@@ -85,3 +85,5 @@ production:
   database: card-collector_production
   username: card-collector
   password: <%= ENV['CARD-COLLECTOR_DATABASE_PASSWORD'] %>
+# additions
+  url: <%= ENV['DATABASE_URL'] %>
