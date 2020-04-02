@@ -1,3 +1,30 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// collections
+.collections{
+
+}
+  .collections .content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .collections .content .section{
+      text-align: center;
+      width: 140px;
+      margin: 20px;
+    }
+      .collections .content .section .image{
+        height: 190px;
+        width: 140px;
+        background-color: red;
+        color: white;
+      }
+      .collections .content #yugiohSection .image{
+        background-image: url(yugioh_back.jpg);
+      }
+      .collections .content #yugiohSection a:hover .image{
+        background-image: url(yugioh_card_front_small.jpg);
+      }
