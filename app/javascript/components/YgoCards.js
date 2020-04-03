@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Card from "./Card"
+import YgoCard from "./YgoCard"
 
-class Cards extends React.Component {
+class YgoCards extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,11 +26,12 @@ class Cards extends React.Component {
       ]
     };
   }
+
   render () {
     const { allCards } = this.state
     let cards = allCards.map((card, index)=>{
       return(
-        <Card
+        <YgoCard
           key = {index}
           card = {card}
         />
@@ -48,4 +49,4 @@ class Cards extends React.Component {
   }
 }
 
-export default Cards
+export default YgoCards

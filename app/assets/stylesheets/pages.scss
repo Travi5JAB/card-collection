@@ -15,16 +15,15 @@
       text-align: center;
       width: 140px;
       margin: 20px;
+      color: white;
     }
       .collections .content .section .image{
         height: 190px;
         width: 140px;
+      }
+      .collections .content .section .image img{
+        height: 190px;
+        width: 140px;
         background-color: red;
-        color: white;
       }
-      .collections .content #yugiohSection .image{
-        background: url(yugioh_back.jpg);
-      }
-      .collections .content #yugiohSection a:hover .image{
-        background: url(yugioh_card_front_small.jpg);
-      }
+// end collections

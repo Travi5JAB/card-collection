@@ -5,25 +5,61 @@ import PropTypes from "prop-types"
 class Collections extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      ygoImgSrc: "https://i.redd.it/67u7dshy4vyz.jpg",
+      pkmImgSrc: "https://tr.rbxcdn.com/9dc3733d058e693470620a43b661a31b/420/420/Decal/Png",
+      hover: false,
+    };
   }
+
+  onHoverYGO = () => {
+    this.setState({hover: !this.state.hover})
+    var image
+    if (this.state.hover){
+      image = "https://i.redd.it/67u7dshy4vyz.jpg"
+      this.setState({ygoImgSrc: image})
+    }else{
+      image = "https://52f4e29a8321344e30ae-0f55c9129972ac85d6b1f4e703468e6b.ssl.cf2.rackcdn.com/products/pictures/1556795.jpg"
+      this.setState({ygoImgSrc: image})
+    }
+  }
+
+  onHoverPkm = () => {
+    this.setState({hover: !this.state.hover})
+    var image
+    if (this.state.hover){
+      image = "https://tr.rbxcdn.com/9dc3733d058e693470620a43b661a31b/420/420/Decal/Png"
+      this.setState({pkmImgSrc: image})
+    }else{
+      image = "https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"
+      this.setState({pkmImgSrc: image})
+    }
+  }
+
+
+
   render () {
+    const { ygoImgSrc, pkmImgSrc } = this.state
     return (
       <div className="collections">
         <h1>Collections</h1>
         <div className="content">
 
-          <div className="section" id="yugiohSection">
+          <div className="section" id="yugiohSection" onMouseEnter={this.onHoverYGO} onMouseLeave={this.onHoverYGO}>
             <a href="/allcards/Yu-Gi-Oh!">
-              <div className="image"></div>
+              <div className="image">
+                <img className="image" src={ygoImgSrc}/>
+              </div>
               <br/>
               Yu-Gi-Oh!
             </a>
           </div>
 
-          <div className="section" id="pokemonSection">
-            <a href="">
-              <div className="image">Coming Soon</div>
+          <div className="section" id="pokemonSection" onMouseEnter={this.onHoverPkm} onMouseLeave={this.onHoverPkm}>
+            <a href="/allcards/Pokémon">
+              <div className="image">
+                <img className="image" src={pkmImgSrc}/>
+              </div>
               <br/>
               Pokémon
             </a>

@@ -20,3 +20,388 @@
     padding-right: 50px;
     width: 100%;
   }
+
+// end all devis forms
+
+// registrations edit
+.edit{
+  display: grid;
+  grid-template-columns: 24% 1% 75%;
+  grid-auto-rows: 50px 100px 250px 120px auto;
+  grid-template-areas:
+  "h2 hr ."
+  "h2 hr form"
+  "back hr form"
+  "links hr form"
+  "base base base";
+}
+.edit h2{
+  grid-area: h2;
+  font-size: 50px;
+}
+.edit #back{
+  grid-area: back;
+}
+.edit #links{
+  grid-area: links;
+}
+.edit hr{
+  grid-area: hr;
+}
+.edit form{
+  text-align: center;
+  grid-area: form;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto;
+  grid-template-areas:
+  "email username"
+  "fName lName"
+  "password confPassword"
+  "hr hr"
+  "curPass curPass"
+  "actions actions";
+}
+  .edit .field{
+
+  }
+    .edit #emial{
+      grid-area: email;
+    }
+      .edit #user_email{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .edit #usename{
+      grid-area: username;
+    }
+      .edit #user_username{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .edit #f_name{
+      grid-area: fName;
+    }
+      .edit #user_first_name{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        font-size: 30px;
+      }
+    .edit #l_name{
+      grid-area: lName;
+    }
+      .edit #user_last_name{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+
+    .edit #new_password{
+      grid-area: password;
+    }
+      .edit #user_password{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        font-size: 30px;
+      }
+    .edit #conf_password{
+      grid-area: confPassword;
+    }
+      .edit #user_password_confirmation{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+      .edit label{
+        font-size: 20px;
+      }
+    .edit form #hr{
+      grid-area: hr;
+      width: 100%;
+      border-top: 1px solid rgba(0,0,0,.5);
+    }
+    .edit #current_password{
+      grid-area: curPass;
+    }
+      .edit #user_current_password{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .edit .actions{
+      grid-area: actions;
+    }
+      .edit .actions input{
+        width: 75%;
+        background-color: purple;
+        color: white;
+        font-size: 30px;
+        border-radius: 50px;
+        height: 50px;
+      }
+.edit .base{
+  grid-area: base;
+}
+// error msgs
+.edit #error_explanation{
+  color: red;
+  z-index: 999;
+  text-align: left;
+  margin:0;
+  font-size: 15px !important;
+}
+  .edit #error_explanation h2{
+    font-size: 12px !important;
+  }
+  .edit #error_explanation ul{
+    padding: 0px;
+  }
+
+// end registrations edit
+
+
+// registrations new
+.sign_up{
+  display: grid;
+  grid-template-columns: 24% 1% 75%;
+  grid-auto-rows: 50px 50px 150px 100px auto;
+  grid-template-areas:
+  "h2 hr ."
+  "h2 hr form"
+  "links hr form"
+  "links hr form"
+  "base base base";
+}
+.sign_up h2{
+  grid-area: h2;
+  font-size: 50px;
+}
+.sign_up #links{
+  grid-area: links;
+}
+.sign_up hr{
+  grid-area: hr;
+}
+.sign_up form{
+  text-align: center;
+  grid-area: form;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 80px 80px 80px 100px;
+  grid-template-areas:
+  "email username"
+  "fName lName"
+  "password confPassword"
+  "actions actions";
+}
+  .sign_up .field{
+
+  }
+    .sign_up #emial{
+      grid-area: email;
+    }
+      .sign_up #user_email{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .sign_up #usename{
+      grid-area: username;
+    }
+      .sign_up #user_username{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .sign_up #f_name{
+      grid-area: fName;
+    }
+      .sign_up #user_first_name{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .sign_up #l_name{
+      grid-area: lName;
+    }
+      .sign_up #user_last_name{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+
+    .sign_up #password{
+      grid-area: password;
+    }
+      .sign_up #user_password{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+    .sign_up #conf_password{
+      grid-area: confPassword;
+    }
+      .sign_up #user_password_confirmation{
+        width: 75%;
+        border: 2px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+      }
+      .sign_up label{
+        font-size: 20px;
+      }
+    .sign_up .actions{
+      grid-area: actions;
+    }
+      .sign_up .actions input{
+        width: 75%;
+        background-color: purple;
+        color: white;
+        font-size: 30px;
+        border-radius: 50px;
+        height: 50px;
+      }
+.sign_up .base{
+  grid-area: base;
+}
+
+// error msgs
+.sign_up #error_explanation{
+  color: red;
+  z-index: 999;
+  text-align: left;
+  margin:0;
+  font-size: 15px !important;
+}
+  .sign_up #error_explanation h2{
+    font-size: 12px !important;
+  }
+  .sign_up #error_explanation ul{
+    padding: 0px;
+  }
+// end registrations new
+
+
+
+// sessions new
+.log_in{
+  display: grid;
+  grid-template-columns: 24% 1% 75%;
+  grid-auto-rows: 50px 50px 150px 100px auto;
+  grid-template-areas:
+  "h2 hr ."
+  "h2 hr form"
+  "links hr form"
+  "links hr form"
+  "base base base";
+}
+  .log_in h2{
+    grid-area: h2;
+    font-size: 50px;
+  }
+  .log_in #links{
+    grid-area: links;
+  }
+  .log_in hr{
+    grid-area: hr;
+  }
+  .log_in form{
+    text-align: center;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    " email"
+    "password"
+    "checkbox"
+    "actions";
+  }
+    .log_in .field{
+
+    }
+      .log_in #emial{
+        grid-area: email;
+      }
+        .log_in #user_email{
+          width: 75%;
+          border: 2px solid rgba(0,0,0,0);
+          border-bottom: 1px solid rgba(0,0,0,.5);
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 30px;
+        }
+
+      .log_in #password{
+        grid-area: password;
+      }
+        .log_in #user_password{
+          width: 75%;
+          border: 2px solid rgba(0,0,0,0);
+          border-bottom: 1px solid rgba(0,0,0,.5);
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 30px;
+        }
+      .log_in #check_box{
+        grid-area: checkbox;
+      }
+        .log_in #check_box input{
+          height: 15px;
+        }
+        .log_in label{
+          font-size: 20px;
+        }
+      .log_in .actions{
+        grid-area: actions;
+      }
+        .log_in .actions input{
+          width: 75%;
+          background-color: purple;
+          color: white;
+          font-size: 30px;
+          border-radius: 50px;
+          height: 50px;
+        }
+  .log_in .base{
+    grid-area: base;
+  }
+// end sessions new

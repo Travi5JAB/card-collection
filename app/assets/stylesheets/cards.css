@@ -10,8 +10,12 @@
       width: 140px;
       margin: 10px;
       border: solid black 3px;
-      background-image: url(yugioh_card_front_small.jpg);
     }
+      .cards #card img{
+        position: absolute;
+        height: 190px;
+        width: 140px;
+      }
     .cards .ownedCard{
       box-shadow:  5px 10px 8px rgba(0,0,0,0.9), 5px 10px 18px rgba(0,0,0,0.5);
     }

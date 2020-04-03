@@ -1,19 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-class Card extends React.Component {
+class PkmCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render () {
     const { owned, id } = this.props.card
-    console.log();
     return (
       <div>
         {owned === "o" &&
 
         <div className="ownedCard" id="card">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"/>
           <div className="overlay">
             ID: #{id}
             <br/>
@@ -30,6 +30,7 @@ class Card extends React.Component {
         ||
 
         <div className="unOwnedCard" id="card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"/>
           <div className="overlay" id="blackout">
             ID: #{id}
             <br/>
@@ -47,4 +48,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card
+export default PkmCard
