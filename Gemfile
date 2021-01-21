@@ -63,3 +63,12 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # devise
 gem 'devise'
+
+# httparty
+gem "httparty","~> 0.13.0"
+
+# pkm
+gem 'pokemon_tcg_sdk'
+
+# rest client
+gem 'rest-client', '~> 2.1'

@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_01_191618) do
+ActiveRecord::Schema.define(version: 2021_01_07_234009) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "hstore"
   enable_extension "plpgsql"
+
+  create_table "pk_cards", force: :cascade do |t|
+    t.string "card_id"
+    t.string "name"
+    t.integer "national_pokedex_number"
+    t.string "image_url"
+    t.string "image_url_hi_res"
+    t.string "subtype"
+    t.string "supertype"
+    t.hstore "ability"
+    t.hstore "ancient_trait"
+    t.string "hp"
+    t.string "number"
+    t.string "artist"
+    t.string "rarity"
+    t.string "series"
+    t.string "set"
+    t.string "set_code"
+    t.string "retreat_cost", array: true
+    t.integer "converted_retreat_cost"
+    t.string "text", array: true
+    t.string "types", array: true
+    t.string "attacks", array: true
+    t.string "weaknesses", array: true
+    t.string "resistances", array: true
+    t.string "evolves_from"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -34,6 +64,20 @@ ActiveRecord::Schema.define(version: 2020_04_01_191618) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "ygo_cards", force: :cascade do |t|
+    t.bigint "card_id"
+    t.string "name"
+    t.string "type"
+    t.string "desc"
+    t.string "race"
+    t.string "archetype"
+    t.json "card_sets", array: true
+    t.json "card_images", array: true
+    t.json "card_prices", array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

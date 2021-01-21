@@ -1,0 +1,2 @@
+class YgoCard < ApplicationRecord
+end

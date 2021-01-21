@@ -42,6 +42,7 @@ class PkmCards extends React.Component {
       <div className="cards">
         <h1>Pokémon Cards</h1>
         <div className="content">
+          <div class="pokemonCard" id="cardDetail"></div>
           {cards}
         </div>
       </div>

@@ -1,0 +1,2 @@
+class PkCard < ApplicationRecord
+end

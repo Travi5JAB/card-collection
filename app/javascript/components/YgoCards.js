@@ -3,29 +3,26 @@ import PropTypes from "prop-types"
 
 import YgoCard from "./YgoCard"
 
+// import { allYgoCards } from "../api/api"
+
 class YgoCards extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allCards: [
-        {id:1,owned:"o"},
-        {id:2,owned:"n"},
-        {id:3,owned:"n"},
-        {id:4,owned:"o"},
-        {id:5,owned:"o"},
-        {id:6,owned:"n"},
-        {id:7,owned:"o"},
-        {id:8,owned:"o"},
-        {id:9,owned:"o"},
-        {id:10,owned:"n"},
-        {id:11,owned:"n"},
-        {id:12,owned:"o"},
-        {id:13,owned:"o"},
-        {id:14,owned:"n"},
-        {id:15,owned:"o"}
-      ]
+      allCards: [],
+      allCardsTest:[]
     };
   }
+
+  // componentDidMount() {
+  //   this.fetchData();
+  // }
+  // fetchData() {
+  //   allYgoCards().then(APIcards => {
+  //     this.setState({ allCards: APIcards });
+  //     console.log(this.state.allCards);
+  //   });
+  // }
 
   render () {
     const { allCards } = this.state

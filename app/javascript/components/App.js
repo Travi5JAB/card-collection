@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+
 // parts
 import Routes from "./Routes";
 
@@ -9,6 +10,8 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
+
+
   render () {
     return (
       <div className="app">
