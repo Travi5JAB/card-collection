@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :pk_cards
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :pk_cards
+    get 'pokemon_cards/all/:min/:max' => 'pk_cards#index'
+    get '/pokemon_cards/all/count' => 'pk_cards#total_cards'
 
   resources :ygo_cards
   get 'ygo_card/update' => 'ygo_cards#updater'

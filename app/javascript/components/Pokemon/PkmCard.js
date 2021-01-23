@@ -18,22 +18,19 @@ class PkmCard extends React.Component {
   }
 
   render () {
-    const { owned, id } = this.props.card
+    const { card } = this.props
+    const { owned } = card
     return (
       <div>
         {owned === "o" &&
 
         <div className="ownedCard" id="card">
           <a onClick={this.handleDropClick}>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"/>
+            <img src={card.image_url}/>
             <div className="overlay">
-              ID: #{id}
+              NP#: {card.national_pokedex_number}
               <br/>
-              Name:
-              <br/>
-              Atk:
-              <br/>
-              Def:
+              Name: {card.name}
               <br/>
               Location:
             </div>
@@ -43,15 +40,12 @@ class PkmCard extends React.Component {
         ||
 
         <div className="unOwnedCard" id="card">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"/>
+        <img src={card.image_url}/>
           <div className="overlay" id="blackout">
-            ID: #{id}
+            NP#: {card.national_pokedex_number}
             <br/>
-            Name:
+            Name: {card.name}
             <br/>
-            Atk:
-            <br/>
-            Def:
           </div>
         </div>
 

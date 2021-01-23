@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 ////pages
 import Collections from "./Collections"
 import Home from "./Home"
-import PkmCards from "./PkmCards"
+import PkmCards from "./Pokemon/PkmCards"
 import Profile from "./Profile"
-import YgoCards from "./YgoCards"
+import YgoCards from "./Yu-Gi-Oh/YgoCards"
 
 function Routes() {
   return (

@@ -4,9 +4,13 @@ class PkCardsController < ApplicationController
   # GET /pk_cards
   # GET /pk_cards.json
   def index
-    @pk_cards = PkCard.all
-    # @cards = Pokemon::Card.first
+    @pk_cards =  PkCard.where(id: params[:min].to_i .. params[:max].to_i)
     render({json: @pk_cards})
+  end
+
+  def total_cards
+    @total = PkCard.count
+    render({json: @total})
   end
 
   # GET /pk_cards/1
@@ -19,39 +23,6 @@ class PkCardsController < ApplicationController
     @pk_card = PkCard.new
   end
 
-  # GET /pk_cards/1/edit
-  def edit
-  end
-
-  # POST /pk_cards
-  # POST /pk_cards.json
-  def create
-    @pk_card = PkCard.new(pk_card_params)
-
-    respond_to do |format|
-      if @pk_card.save
-        format.html { redirect_to @pk_card, notice: 'Pk card was successfully created.' }
-        format.json { render :show, status: :created, location: @pk_card }
-      else
-        format.html { render :new }
-        format.json { render json: @pk_card.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /pk_cards/1
-  # PATCH/PUT /pk_cards/1.json
-  def update
-    respond_to do |format|
-      if @pk_card.update(pk_card_params)
-        format.html { redirect_to @pk_card, notice: 'Pk card was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pk_card }
-      else
-        format.html { render :edit }
-        format.json { render json: @pk_card.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # DELETE /pk_cards/1
   # DELETE /pk_cards/1.json

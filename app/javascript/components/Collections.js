@@ -7,7 +7,7 @@ class Collections extends React.Component {
     super(props);
     this.state = {
       ygoImgSrc: "https://i.redd.it/67u7dshy4vyz.jpg",
-      pkmImgSrc: "https://tr.rbxcdn.com/9dc3733d058e693470620a43b661a31b/420/420/Decal/Png",
+      pkmImgSrc: "https://cdn.bulbagarden.net/upload/1/17/Cardback.jpg",
       hover: false,
     };
   }
@@ -28,7 +28,7 @@ class Collections extends React.Component {
     this.setState({hover: !this.state.hover})
     var image
     if (this.state.hover){
-      image = "https://tr.rbxcdn.com/9dc3733d058e693470620a43b661a31b/420/420/Decal/Png"
+      image = "https://cdn.bulbagarden.net/upload/1/17/Cardback.jpg"
       this.setState({pkmImgSrc: image})
     }else{
       image = "https://images-na.ssl-images-amazon.com/images/I/51vmsCbLu9L._AC_.jpg"

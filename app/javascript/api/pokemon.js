@@ -1,21 +1,17 @@
-// Pokemon api at https://pokemontcg.io/
+// pokemon cards
 
-// const base = "https://api.pokemontcg.io/v1/"
+// all cards
+export const allPokemonCards = (min,max) => {
+  return fetch(`/pokemon_cards/all/${min}/${max}`).then(resp => {
+    return resp.json();
+    console.log(resp);
+  });
+};
 
-// export const cardFetch = () => {
-//   return fetch(`https://api.pokemontcg.io/v1/`).then(resp => {
-//     return resp.json();
-//   });
-// };
-
-// const pokemon = require('pokemontcgsdk')
-//
-//
-//
-//
-// export const cardFetch = () => {
-//   pokemon.card.find('base1-4')
-//   .then(result => {
-//       console.log(result.card.name) // "Charizard"
-//   })
-// };
+// all cards
+export const allPkCardsCount = () => {
+  return fetch(`/pokemon_cards/all/count`).then(resp => {
+    return resp.json();
+    console.log(resp);
+  });
+};
