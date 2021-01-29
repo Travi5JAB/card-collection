@@ -3,6 +3,11 @@
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
+  def single_user
+    @user = User.where('unique_url = ?',params[:unique_url])[0]
+    render json: @user
+  end
+
   # GET /resource/sign_in
   # def new
   #   super

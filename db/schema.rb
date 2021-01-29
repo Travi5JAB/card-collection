@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_07_234009) do
+ActiveRecord::Schema.define(version: 2021_01_27_191955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 2021_01_07_234009) do
     t.integer "converted_retreat_cost"
     t.string "text", array: true
     t.string "types", array: true
-    t.string "attacks", array: true
-    t.string "weaknesses", array: true
-    t.string "resistances", array: true
+    t.text "attacks"
+    t.text "weaknesses"
+    t.text "resistances"
     t.string "evolves_from"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,20 +64,6 @@ ActiveRecord::Schema.define(version: 2021_01_07_234009) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "ygo_cards", force: :cascade do |t|
-    t.bigint "card_id"
-    t.string "name"
-    t.string "type"
-    t.string "desc"
-    t.string "race"
-    t.string "archetype"
-    t.json "card_sets", array: true
-    t.json "card_images", array: true
-    t.json "card_prices", array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

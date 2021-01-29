@@ -56,7 +56,7 @@ class Collections extends React.Component {
           </div>
 
           <div className="section" id="pokemonSection" onMouseEnter={this.onHoverPkm} onMouseLeave={this.onHoverPkm}>
-            <a href="/allcards/Pokémon">
+            <a href="/pokemon/allsets">
               <div className="image">
                 <img className="image" src={pkmImgSrc}/>
               </div>

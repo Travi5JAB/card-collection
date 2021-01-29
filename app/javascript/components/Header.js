@@ -16,6 +16,8 @@ class Header extends React.Component {
       sign_out
     } = this.props
 
+    const profileLink = `/profile/${current_user.unique_url}`
+
     return (
       <div className="header">
         <div className="navLinks">
@@ -27,7 +29,7 @@ class Header extends React.Component {
           </a>
           <a
             className="navBtn"
-            href="/profile"
+            href={profileLink}
             id="profileBtn"
           >
             Profile

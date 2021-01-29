@@ -10,7 +10,7 @@
   pkCardsArray = Dir.entries("./db/json/Pokemon/cards")
 
   pkCardsArray.each do |fileName|
-    dir = "./json/cards/Pokemon/  #{fileName}"
+    dir = "./json/Pokemon/cards/#{fileName}"
     path = File.join(File.dirname(__FILE__), dir)
     if File.file?(path)
       data = JSON.parse(File.read(path))

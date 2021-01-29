@@ -13,10 +13,13 @@ class App extends React.Component {
 
 
   render () {
+    const {current_user} = this.props
     return (
       <div className="app">
         <div className="wrapper">
-          <Routes />
+          <Routes
+            current_user = {current_user}
+          />
           <div className="base"></div>
         </div>
       </div>

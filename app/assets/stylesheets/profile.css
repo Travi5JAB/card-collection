@@ -1,0 +1,58 @@
+/* profile page */
+.profile{
+
+}
+
+  .profile .userInfo{
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+    "pic name"
+    "pic email";
+  }
+    .profile .profilePic{
+      grid-area: pic;
+    }
+      .profile .profilePic img{
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: green;
+      }
+    .profile .userInfo .name{
+      display: flex;
+      grid-area: name;
+    }
+      .profile .userInfo .name h1{
+        margin-left: 5px;
+      }
+    .profile .userInfo .email{
+      grid-area: email;
+    }
+
+  .profile .collectionsInfo{
+    margin-top: 10px;
+  }
+    .profile .collectionsInfo h2{
+
+    }
+      .profile .collectionsInfo .allCollections{
+
+      }
+      .profile .collectionsInfo .noCollections{
+
+      }
+        .profile .collectionsInfo button{
+          height: 100px;
+          width: 100px;
+          background-color: purple;
+          color: white;
+          border: 1px rgb(48, 0, 74) solid;
+          border-radius: 50%;
+          box-shadow: 5px 10px 8px rgba(0,0,0,0.5), 5px 10px 18px rgba(0,0,0,0.5);
+        }
+        .profile .collectionsInfo button:hover{
+          transform: translateY(5px);
+          box-shadow: 3px 3px 3px rgba(0,0,0,0.5), 5px 5px 5px rgba(0,0,0,0.5);
+        }
