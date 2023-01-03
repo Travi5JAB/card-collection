@@ -65,7 +65,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
 
 # httparty
-gem "httparty","~> 0.13.0"
+gem "httparty","~> 0.21.0"
 
 # pkm
 gem 'pokemon_tcg_sdk'
